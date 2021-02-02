@@ -1,0 +1,40 @@
+/* Global Variables */
+:root{
+    --orange-red-highlight: rgba(223, 74, 22, 0.8);
+    --orange: #df7a16;
+    --orange-red: #df4a16;
+    --green: #BBDD66;
+    --dark-green: #6B8E23;
+    --cyan: #8be9fd;
+    --yellow: #f1fa8c;
+    --int-link: #6272a4;
+}
+
+/*----------Remove Joplin Icon from Internal Links----------------------------*/
+.resource-icon.fa-joplin {
+    display: none;
+}
+/*----------------------------------------------------------------------------*/
+
+/*----------Internal Link Color-----------------------------------------------*/
+a[data-resource-id] {
+    color: var(--orange-red);
+    text-decoration: none;
+}
+a[data-resource-id]:hover {
+    text-decoration: underline;
+}
+/*----------------------------------------------------------------------------*/
+
+/*------Highlight Colors - Markdown First, Search Items Second and Third------*/
+mark { 
+    background-color: var(--orange-red-highlight);
+    padding: 1px 2px;
+}
+mark[data-markjs] {
+    background-color: var(--green);
+}
+mark[data-markjs].mark-selected {
+    background-color: var(--dark-green);
+}
+/*----------------------------------------------------------------------------*/
